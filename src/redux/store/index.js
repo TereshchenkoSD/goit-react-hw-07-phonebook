@@ -35,7 +35,7 @@ import { rootReducer } from '../reducers';
 const store = configureStore({
   reducer: rootReducer,
   devTools: process.env.NODE_ENV === 'development',
-  middleware: getDefaultMiddleware => getDefaultMiddleware().concat(logger),
+  middleware: getDefaultMiddleware => [...getDefaultMiddleware(), logger],
 });
 
 // const persistor = persistStore(store);
