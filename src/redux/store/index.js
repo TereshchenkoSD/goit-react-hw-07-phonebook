@@ -11,7 +11,7 @@ import logger from 'redux-logger';
 //   REGISTER,
 // } from 'redux-persist';
 // import storage from 'redux-persist/lib/storage';
-import { rootReducer } from '../reducers';
+import contactsReducer from '../reducers/contacts';
 
 // const persistConfig = {
 //   key: 'contacts',
@@ -33,7 +33,7 @@ import { rootReducer } from '../reducers';
 // });
 
 const store = configureStore({
-  reducer: rootReducer,
+  reducer: contactsReducer,
   devTools: process.env.NODE_ENV === 'development',
   middleware: getDefaultMiddleware => [...getDefaultMiddleware(), logger],
 });
