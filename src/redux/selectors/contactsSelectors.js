@@ -37,4 +37,5 @@ const selectors = {
   isLoading,
   getVisibleContacts,
 };
+
 export default selectors;
