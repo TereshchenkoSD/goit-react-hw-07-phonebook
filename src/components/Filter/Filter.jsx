@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import selectors from '../../redux/selectors/contactsSelectors';
 
-import actions from '../../redux/actions';
+import * as actions from '../../redux/actions/contacts';
 
 import { FilterLabel, FilterInput } from './Filter.styles';
 

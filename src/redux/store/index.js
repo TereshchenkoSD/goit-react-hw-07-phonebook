@@ -33,7 +33,7 @@ import contactsReducer from '../reducers/contacts';
 // });
 
 const store = configureStore({
-  reducer: contactsReducer,
+  reducer: { contacts: contactsReducer },
   devTools: process.env.NODE_ENV === 'development',
   middleware: getDefaultMiddleware => [...getDefaultMiddleware(), logger],
 });
