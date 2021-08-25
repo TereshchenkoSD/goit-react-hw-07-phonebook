@@ -23,7 +23,7 @@ const items = createReducer([], {
     state.filter(({ id }) => id !== actions.payload),
 });
 
-const isLoading = createReducer(false, {
+const loading = createReducer(false, {
   [contactsActions.addContactRequest]: () => true,
   [contactsActions.addContactSuccess]: () => false,
   [contactsActions.addContactError]: () => false,
@@ -46,7 +46,7 @@ const error = createReducer(null, {
 
 export default combineReducers({
   items,
-  isLoading,
+  loading,
   error,
   filter,
 });
