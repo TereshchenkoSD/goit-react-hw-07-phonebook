@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { CgUserAdd } from 'react-icons/cg';
 
+import toast from 'react-hot-toast';
+
 // import { addContact } from '../../redux/actions/contacts';
 
 import selectors from '../../redux/selectors/contactsSelectors';
@@ -45,7 +47,7 @@ export const ContactForm = () => {
         contact => contact.name.toLowerCase() === name.toLowerCase(),
       )
     ) {
-      alert(`${name} is already in the contact list`);
+      toast(`${name} is already in the contact list`);
       return;
     }
     dispatch(operations.addContact(name, number));

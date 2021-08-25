@@ -1,6 +1,8 @@
 // import { useState, useEffect } from 'react';
 // import { v4 as uuidv4 } from 'uuid';
 
+import { Toaster } from 'react-hot-toast';
+
 import ContactForm from './components/Form';
 
 import ContactList from './components/ContactList';
@@ -72,6 +74,7 @@ export const App = () => {
       <Title text={'Contacts'} />
       <Filter />
       <ContactList />
+      <Toaster position="top-center" />
     </FormContainer>
   );
 };
