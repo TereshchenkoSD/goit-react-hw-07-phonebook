@@ -14,11 +14,11 @@ import * as operations from '../../redux/operations/contactsOperations';
 
 import { Form, Label, Input, Button } from './Form.styles';
 
-export const ContactForm = ({ onSubmit }) => {
+export const ContactForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const dispatch = useDispatch();
-  const contacts = useSelector(selectors.getContacts());
+  const contacts = useSelector(selectors.getContacts);
 
   const handleInputChange = e => {
     const { name, value } = e.currentTarget;

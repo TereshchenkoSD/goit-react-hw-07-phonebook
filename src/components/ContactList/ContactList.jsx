@@ -13,7 +13,7 @@ import Contact from '../Contact';
 import * as operations from '../../redux/operations/contactsOperations';
 
 const ContactList = () => {
-  const contacts = useSelector(selectors.getVisibleContacts());
+  const contacts = useSelector(selectors.getVisibleContacts);
   const dispatch = useDispatch();
 
   const onDeleteContact = id => {
